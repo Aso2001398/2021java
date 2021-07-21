@@ -7,9 +7,9 @@ public class Game {
     public final static int Ship_not_in = 0; //船がいない場合の数値
     public final static int ships = 3; //船の数
     public final static List<Integer> board2 = new ArrayList<>(Arrays.asList(0, 1, 2, 3, 4));//完全ランダム用のリスト
-    public static int x; public static int y;
+    public static int x; public static int y; //入力された数値の格納変数
 
-    public static int[][] board = new int[array_vertical][array_horizon];
+    public static int[][] board = new int[array_vertical][array_horizon]; //盤面
 
     public static void new_game() {
         Scanner sc = new Scanner(System.in);
@@ -30,7 +30,7 @@ public class Game {
             System.out.println("船1:" + ship1.getText()); //インスタンスに含まれている生死テキストを呼び出し表示
             System.out.println("船2:" + ship2.getText());
             System.out.println("船3:" + ship3.getText());
-            System.out.println("爆弾のx座標を入力してください(1-5)");
+            System.out.println("爆弾のx座標を入力してください(1-5) *9を入力すると終了します*");
             x = sc.nextInt() - 1;
             if(x==8){
                 break;
@@ -75,7 +75,7 @@ public class Game {
         ship3.setY_axis(board2.get(2));
     }
 
-    public static void set_board(Ship ship1, Ship ship2, Ship ship3){ //上の初期位置を表に代入する
+    public static void set_board(Ship ship1, Ship ship2, Ship ship3){ //上の初期位置を盤面に代入する
         for(int i=0; i<ships; i++){
             board[ship1.getX_axis()][ship1.getY_axis()] = 1;
             board[ship2.getX_axis()][ship2.getY_axis()] = 1;
