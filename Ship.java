@@ -3,16 +3,16 @@ import java.util.Random;
 public class Ship {
     Random ran = new Random(); //ランダム関数の生成
     private String text = "生きている"; //初期の生存テキスト
+    public String getText() {
+        return text;
+    }
 
     private boolean alive = true; 
     public boolean getAlive(){
         return this.alive;
     }
     
-    public String getText() {
-        return text;
-    }
-
+    
     private int x_axis; //x座標
 
     public int getX_axis() {
