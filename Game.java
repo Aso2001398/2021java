@@ -77,9 +77,9 @@ public class Game {
 
     public static void set_board(Ship ship1, Ship ship2, Ship ship3){ //上の初期位置を盤面に代入する
         for(int i=0; i<ships; i++){
-            board[ship1.getX_axis()][ship1.getY_axis()] = 1;
-            board[ship2.getX_axis()][ship2.getY_axis()] = 1;
-            board[ship3.getX_axis()][ship3.getY_axis()] = 1;
+            board[ship1.getX_axis()][ship1.getY_axis()] = Ship_in;
+            board[ship2.getX_axis()][ship2.getY_axis()] = Ship_in;
+            board[ship3.getX_axis()][ship3.getY_axis()] = Ship_in;
         }
     }
 
