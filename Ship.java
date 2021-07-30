@@ -57,7 +57,7 @@ public class Ship {
     public void shuffles(){ ////当てられた際に座標を変更し、表を更新する
         this.x_axis = ran.nextInt(5);
         this.y_axis = ran.nextInt(5);
-        while(Game.board[x_axis][y_axis] == 1){
+        while(Game.board[x_axis][y_axis] == 1){ //もし被った場合、乱数を振り直す
             this.x_axis = ran.nextInt(5);
             this.y_axis = ran.nextInt(5);
         }
