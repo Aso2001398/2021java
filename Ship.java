@@ -45,9 +45,7 @@ public class Ship {
                 this.alive = false;
             }else{
                 shuffles(); //当てられた際に座標を変更し、表を更新する
-            }
-            
-            
+            }    
         }else if(x == this.x_axis+1 && y == this.y_axis || x == this.x_axis-1 && y == this.y_axis || x == this.x_axis && y == this.y_axis+1 || x == this.x_axis && y == this.y_axis-1 ){
             txt = "波高し";
         }else{
